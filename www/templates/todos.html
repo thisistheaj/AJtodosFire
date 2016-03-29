@@ -1,0 +1,19 @@
+<ion-view>
+  <ion-nav-buttons side="right">
+    <button class="button-clear button button-icon ion-android-add button-positive" ng-click="add()"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="left">
+    <button class="button-clear button button-icon ion-power button-assertive" ng-click="logout()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <!--iterate over todos and bind them to their $value attribute-->
+      <ion-item ng-repeat="todo in todos">
+        {{todo.$value}}
+        <ion-option-button class="button-assertive" ng-click="remove(todo)">
+          Remove
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
